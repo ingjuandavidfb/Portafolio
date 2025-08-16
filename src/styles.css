@@ -1,1 +1,92 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles for dark mode */
+:root {
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #212529;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #212529;
+  --bs-body-color: #ffffff;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #343a40;
+  --bs-dark: #f8f9fa;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark mode specific styles */
+.dark-mode {
+  background: linear-gradient(135deg, #212529, #343a40) !important;
+}
+
+.dark-mode .bg-white {
+  background-color: var(--bs-dark) !important;
+  color: var(--bs-body-color);
+}
+
+.dark-mode .bg-light {
+  background-color: #343a40 !important;
+}
+
+.dark-mode .text-muted {
+  color: #adb5bd !important;
+}
+
+.dark-mode .border-bottom {
+  border-bottom-color: #495057 !important;
+}
+
+.dark-mode .border-top {
+  border-top-color: #495057 !important;
+}
+
+.dark-mode .card {
+  background-color: #343a40;
+  border-color: #495057;
+  color: var(--bs-body-color);
+}
+
+.dark-mode .badge.bg-secondary {
+  background-color: #495057 !important;
+  color: #f8f9fa !important;
+}
+
+.dark-mode .badge.bg-light {
+  background-color: #495057 !important;
+  color: #f8f9fa !important;
+}
+
+/* Contact section gradient for dark mode */
+.dark-mode .contact-gradient {
+  background: linear-gradient(135deg, #0d6efd, #6f42c1) !important;
+}
+
+/* Hero section adjustments for dark mode */
+.dark-mode .hero-bg-blur {
+  opacity: 0.3;
+}
+
+/* Ensure proper contrast for links in dark mode */
+.dark-mode a {
+  color: #79c0ff;
+}
+
+.dark-mode a:hover {
+  color: #58a6ff;
+}

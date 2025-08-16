@@ -1,0 +1,31 @@
+.bg-outline-primary {
+  background-color: transparent;
+  border: 1px solid #0d6efd;
+  color: #0d6efd;
+  transition: all 0.3s ease;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Dark mode adjustments */
+:root[data-bs-theme="dark"] .card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.1) !important;
+  background-color: #495057 !important;
+}
+
+:root[data-bs-theme="dark"] .bg-outline-primary {
+  border-color: #79c0ff;
+  color: #79c0ff;
+}
+
+:root[data-bs-theme="dark"] .bg-outline-primary:hover {
+  background-color: #79c0ff;
+  color: #212529;
+}

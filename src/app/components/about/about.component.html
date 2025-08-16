@@ -1,0 +1,34 @@
+<section id="about" class="py-5 bg-white">
+  <div class="container py-5">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <div class="mb-3">
+          <span class="badge bg-light text-dark px-3 py-2">Sobre mí</span>
+        </div>
+        
+        <h2 class="display-5 fw-bold mb-4">Mi pasión por el desarrollo</h2>
+        
+        <p class="lead text-muted mb-4">
+          Como desarrollador backend, me especializo en crear APIs REST robustas con Java y Spring Boot. 
+          También tengo experiencia en frontend con Angular, lo que me permite entender el stack completo 
+          y colaborar efectivamente en proyectos full-stack.
+        </p>
+        
+        <div class="row g-3">
+          <div class="col-sm-6" *ngFor="let feature of features">
+            <div class="d-flex align-items-center">
+              <div class="bg-primary rounded-circle me-2" style="width: 8px; height: 8px;"></div>
+              <span class="small">{{ feature }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-5 text-center">
+        <img src="/src/assets/images/DeveloperWorkspaceCode.png" 
+             alt="Workspace de desarrollo"
+             class="img-fluid rounded shadow-lg">
+      </div>
+    </div>
+  </div>
+</section>

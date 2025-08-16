@@ -1,0 +1,55 @@
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid #dee2e6;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(15deg);
+}
+
+/* Dark mode styles */
+:root[data-bs-theme="dark"] .navbar {
+  background-color: rgba(33, 37, 41, 0.9) !important;
+  border-bottom-color: #495057;
+}
+
+:root[data-bs-theme="dark"] .theme-toggle {
+  border-color: #495057;
+  color: #f8f9fa;
+}
+
+:root[data-bs-theme="dark"] .theme-toggle:hover {
+  background-color: #495057;
+  border-color: #6c757d;
+}

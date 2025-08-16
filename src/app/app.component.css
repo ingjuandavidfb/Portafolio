@@ -1,0 +1,8 @@
+.app-background {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  transition: background 0.3s ease;
+}
+
+:root[data-bs-theme="dark"] .app-background {
+  background: linear-gradient(135deg, #212529, #343a40);
+}
