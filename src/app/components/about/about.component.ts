@@ -15,4 +15,5 @@ export class AboutComponent {
     'Bases de Datos SQL',
     'Arquitectura de Microservicios'
   ];
+
 }
