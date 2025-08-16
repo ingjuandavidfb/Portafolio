@@ -1,0 +1,39 @@
+<section id="projects" class="py-5 bg-white">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <span class="badge bg-light text-dark px-3 py-2 mb-3">Mis Proyectos</span>
+      <h2 class="display-5 fw-bold mb-4">Trabajos destacados</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 600px;">
+        Algunos de los proyectos en los que he trabajado recientemente
+      </p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-6" *ngFor="let project of projects">
+        <div class="card h-100 border-0 shadow-sm">
+          <img [src]="project.image" [alt]="project.title" class="card-img-top" style="height: 200px; object-fit: cover;">
+          
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text text-muted">{{ project.description }}</p>
+            
+            <div class="d-flex flex-wrap gap-1 mb-3">
+              <span class="badge bg-outline-primary" *ngFor="let tech of project.technologies">
+                {{ tech }}
+              </span>
+            </div>
+            
+            <div class="d-flex gap-2">
+              <a [href]="project.githubUrl" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-github me-2"></i>Código
+              </a>
+              <a [href]="project.demoUrl" class="btn btn-primary btn-sm">
+                <i class="bi bi-box-arrow-up-right me-2"></i>Ver Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

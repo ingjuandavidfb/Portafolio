@@ -1,0 +1,27 @@
+<section id="skills" class="py-5 bg-light">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <span class="badge bg-light text-dark px-3 py-2 mb-3">Habilidades Técnicas</span>
+      <h2 class="display-5 fw-bold mb-4">Tecnologías que domino</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 600px;">
+        Estas son las principales tecnologías y herramientas con las que trabajo día a día
+      </p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6" *ngFor="let category of skillCategories">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <div class="card-body">
+            <i class="{{ category.icon }} {{ category.color }}" style="font-size: 3rem;"></i>
+            <h5 class="card-title mt-3">{{ category.title }}</h5>
+            <div class="d-flex flex-wrap justify-content-center gap-1 mt-3">
+              <span class="badge bg-secondary" *ngFor="let skill of category.skills">
+                {{ skill }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

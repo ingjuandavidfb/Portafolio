@@ -1,0 +1,34 @@
+.hero-bg-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #0d6efd, #6f42c1);
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.2;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.hero-image {
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+  transition: border-color 0.3s ease;
+}
+
+.text-muted a:hover {
+  color: #0d6efd !important;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode adjustments */
+:root[data-bs-theme="dark"] .hero-bg-blur {
+  opacity: 0.3;
+}
+
+:root[data-bs-theme="dark"] .hero-image {
+  border-color: #495057 !important;
+}

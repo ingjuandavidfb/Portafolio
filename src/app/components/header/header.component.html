@@ -1,0 +1,39 @@
+<header class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <div class="rounded-circle bg-gradient d-flex align-items-center justify-content-center me-2" 
+           style="width: 32px; height: 32px; background: linear-gradient(45deg, #0d6efd, #6f42c1);">
+        <span class="text-white fw-bold small">DF</span>
+      </div>
+      <span class="fw-bold fs-5">David Figueroa</span>
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <nav class="navbar-nav mx-auto">
+        <a class="nav-link" (click)="scrollToSection('about')" style="cursor: pointer;">Sobre mí</a>
+        <a class="nav-link" (click)="scrollToSection('skills')" style="cursor: pointer;">Habilidades</a>
+        <a class="nav-link" (click)="scrollToSection('projects')" style="cursor: pointer;">Proyectos</a>
+        <a class="nav-link" (click)="scrollToSection('contact')" style="cursor: pointer;">Contacto</a>
+      </nav>
+      
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-primary">
+          <i class="bi bi-envelope me-2"></i>
+          Contáctame
+        </button>
+        <button 
+          class="btn btn-outline-secondary btn-sm theme-toggle" 
+          (click)="toggleTheme()"
+          [attr.aria-label]="isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
+          title="{{ isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro' }}">
+          <i class="bi" [ngClass]="isDarkMode ? 'bi-sun-fill' : 'bi-moon-fill'"></i>
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</header>
