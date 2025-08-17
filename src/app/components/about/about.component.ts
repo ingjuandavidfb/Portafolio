@@ -16,4 +16,5 @@ export class AboutComponent {
     'Arquitectura de Microservicios'
   ];
 
+  
 }
